@@ -6,4 +6,4 @@ Built using modern technologies: node.js, express,google api.
 npm install
 npm run start
 ```
-enter the address for getting the location and latitude ,longitude.
+enter the address for getting the location -> street,city ,states ,latitude ,longitude.
