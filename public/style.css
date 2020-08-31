@@ -1,0 +1,35 @@
+*{
+
+    margin:0;
+    padding:0;
+    background-color: rgb(238, 220, 163);
+}
+
+
+.container{
+  margin-left: 35%;
+}
+
+#address{
+    display: inline-block;
+    padding: 10px;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: white;
+}
+
+button {
+    background-color: rgb(14, 91, 163); 
+    border: none;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 10px;
+}
