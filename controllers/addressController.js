@@ -14,10 +14,10 @@ const getAddressDetails = async (req, res, next) => {
   const location = geoRes.data.results[0].geometry.location;
  
   const locationDetails = {
-    street: addressComponents[0].long_name,
-    city: addressComponents[2].long_name,
-    state: addressComponents[3].long_name,
-    country: addressComponents[4].long_name,
+    street: addressComponents[1].long_name,
+    city: addressComponents[3].long_name,
+    state: addressComponents[4].long_name,
+    country: addressComponents[5].long_name,
     lat: location.lat,
     lng: location.lng,
   };
