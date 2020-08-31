@@ -1,5 +1,5 @@
 # get-address
-Built using modern technologies: node.js, express,google api.
+Built using modern technologies: node.js, express, open street api.
 
 ### Setup:
 ```Bash
