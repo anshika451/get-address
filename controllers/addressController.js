@@ -5,21 +5,19 @@ const getAddressDetails = async (req, res, next) => {
   const addressUrl = encodeURIComponent(address);
 
   const geoRes = await axios.get(
-    `https://maps.googleapis.com/maps/api/geocode/json?address=${addressUrl}&key=${process.env.API_KEY}`
+    `https://nominatim.openstreetmap.org/search/?q=${addressUrl}&format=json&addressdetails=1`
   );
 
- 
+  const addressComponents = geoRes.data[0].address;
+  const location = geoRes.data[0];
 
-  const addressComponents = geoRes.data.results[0].address_components;
-  const location = geoRes.data.results[0].geometry.location;
- 
   const locationDetails = {
-    street: addressComponents[1].long_name,
-    city: addressComponents[3].long_name,
-    state: addressComponents[4].long_name,
-    country: addressComponents[5].long_name,
+    street: addressComponents.road,
+    city: addressComponents.city,
+    state: addressComponents.state,
+    country: addressComponents.country,
     lat: location.lat,
-    lng: location.lng,
+    lng: location.lon,
   };
 
   res.status(200).json({

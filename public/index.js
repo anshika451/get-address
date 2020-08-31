@@ -22,3 +22,7 @@ form.addEventListener('submit', async (e) => {
   `;
   document.querySelector('#results').innerHTML = HTML;
 });
+
+function initMap(details) {
+  int;
+}
