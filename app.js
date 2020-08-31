@@ -9,10 +9,7 @@ dotenv.config();
 const app = express();
 app.use(express.json());
 
-// app.set('view engine', 'pug');
-// app.set('views', path.join(__dirname, 'views'));
 
-// serves static files from public folder
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/api/', router);

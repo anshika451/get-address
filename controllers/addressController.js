@@ -8,13 +8,11 @@ const getAddressDetails = async (req, res, next) => {
     `https://maps.googleapis.com/maps/api/geocode/json?address=${addressUrl}&key=${process.env.API_KEY}`
   );
 
-  //   console.log(geoRes.data.results);
+ 
 
   const addressComponents = geoRes.data.results[0].address_components;
   const location = geoRes.data.results[0].geometry.location;
-  //   console.log(location);
-  //   console.log(addressComponents);
-
+ 
   const locationDetails = {
     street: addressComponents[0].long_name,
     city: addressComponents[2].long_name,
